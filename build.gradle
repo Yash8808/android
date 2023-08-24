@@ -12,6 +12,17 @@ buildscript {
     // in the individual module build.gradle files
   }
 }
+plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "yash8808_android"
+    property "sonar.organization", "yash8808"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
 
 allprojects {
   repositories {
