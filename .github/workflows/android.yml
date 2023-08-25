@@ -24,3 +24,14 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Copy build artifacts to current directory
+      run: |
+        cp app/build/outputs/apk/release/app-release-unsigned.apk .
+
+    - name: Publish Build Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: master artifacts
+        path: |
+          app-release-unsigned.apk
