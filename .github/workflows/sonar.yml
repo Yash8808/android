@@ -1,7 +1,9 @@
 name: "Sonar Scanning"
 
 on:
-  #push:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
   pull_request_target:
     types: [opened, synchronize, reopened]
 
