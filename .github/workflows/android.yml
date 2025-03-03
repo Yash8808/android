@@ -30,7 +30,7 @@ jobs:
         cp app/build/outputs/apk/release/app-release-unsigned.apk .
 
     - name: Publish Build Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: master artifacts
         path: |
